@@ -129,7 +129,7 @@ public class DEEPRecipes implements RecipeEntrypoint {
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("S S"," S ")
 			.addInput('S', DEEPItems.ingotSilver)
-			.create("silverBucket", new ItemStack(Items.BUCKET, 2));
+			.create("silverBucket", new ItemStack(Items.BUCKET_IRON, 2));
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("SCS","SCS")
 			.addInput('S', DEEPItems.ingotSilver)
@@ -415,11 +415,11 @@ public class DEEPRecipes implements RecipeEntrypoint {
 		RecipeBuilder.Shapeless(MOD_ID)
 			.addInput(DEEPItems.niter)
 			.addInput(Items.COAL)
-			.create("niterToGunpowder", new ItemStack(Items.SULPHUR, 2));
+			.create("niterToGunpowder", new ItemStack(Items.SULFUR, 2));
 		RecipeBuilder.Shapeless(MOD_ID)
 			.addInput(DEEPItems.niter)
 			.addInput(Items.COAL, 1)
-			.create("niterToGunpowderCharcoal", new ItemStack(Items.SULPHUR, 2));
+			.create("niterToGunpowderCharcoal", new ItemStack(Items.SULFUR, 2));
 		RecipeBuilder.Shapeless(MOD_ID)
 			.addInput(DEEPItems.niter)
 			.addInput(Items.AMMO_PEBBLE)
@@ -471,7 +471,7 @@ public class DEEPRecipes implements RecipeEntrypoint {
 			.setInput(DEEPBlocks.blockClayRed)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.clayRed, 1), 4, 8), 30)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Items.AMMO_PEBBLE, 1), 1, 3), 20)
-			.addEntry(new WeightedRandomLootObject(new ItemStack(Items.SULPHUR, 1), 1, 3), 10)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Items.SULFUR, 1), 1, 3), 10)
 			.addEntry(new WeightedRandomLootObject(Items.ORE_RAW_GOLD.getDefaultStack(), 1), 1)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.niter, 1), 1, 2), 5)
 			.create("clay_red");
@@ -479,7 +479,7 @@ public class DEEPRecipes implements RecipeEntrypoint {
 			.setInput(Blocks.BLOCK_CLAY)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Items.CLAY, 1), 4, 8), 30)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(Items.AMMO_PEBBLE, 1), 1, 3), 20)
-			.addEntry(new WeightedRandomLootObject(new ItemStack(Items.SULPHUR, 1), 1, 3), 10)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Items.SULFUR, 1), 1, 3), 10)
 			.addEntry(new WeightedRandomLootObject(DEEPItems.rawSilver.getDefaultStack(), 1), 1)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.niter, 1), 1, 2), 5)
 			.create("clay_blue");
