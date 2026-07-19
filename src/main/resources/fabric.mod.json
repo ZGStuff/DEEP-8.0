@@ -1,33 +1,50 @@
 {
-	"schemaVersion": 1,
-	"id": "examplemod",
-	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This mod aims to help new BTA modders.",
-	"authors": [
-		"Turnip Labs"
-	],
-	"contact": {
-		"homepage": "",
-		"sources": ""
-	},
+  "schemaVersion": 1,
+  "id": "deep",
+  "version": "${version}",
+
+  "name": "DEEP",
+  "description": "A mod that adds new materials, decorative blocks, recipes, and more to BTA. Now on 8.0!",
+  "authors": [
+    "Silveecakes, Erisatis Alterna"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
 	"icon": "icon.png",
-	"license": "CC0-1.0",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"turniplabs.examplemod.ExampleMod"
+  "license": "MIT",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+			"silveon22.deep.Deep"
+    ],
+		"beforeGameStart": [
+			"silveon22.deep.Deep"
+		],
+		"afterGameStart": [
+			"silveon22.deep.Deep"
+		],
+		"afterItemInit": [
+			"silveon22.deep.item.DEEPItems"
+		],
+		"initModels": [
+			"silveon22.deep.DEEPModels"
+		],
+		"recipesReady": [
+			"silveon22.deep.DEEPRecipes"
 		]
 	},
-	"mixins": [
-		"examplemod.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=${fabricloader}",
+  "mixins": [
+      "deep.mixins.json"
+  ],
+
+  "depends": {
 		"minecraft": "*",
-		"java": ">=${java}"
-	},
-	"suggests": {
-		"modmenu": ">=${modmenu}"
-	}
+    "fabricloader": ">=0.15.5"
+  },
+  "suggests": {
+  }
 }

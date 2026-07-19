@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "silveon22.deep.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ChunkDecoratorNetherMixin",
+    "ChunkDecoratorOverworldMixin",
+    "FurnaceFuelMixin",
+    "WorldFeatureClayMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
