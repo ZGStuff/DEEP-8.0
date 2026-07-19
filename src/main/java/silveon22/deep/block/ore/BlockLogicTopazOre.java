@@ -4,6 +4,7 @@ import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogic;
 import net.minecraft.core.block.entity.TileEntity;
 import net.minecraft.core.block.material.Material;
+import net.minecraft.core.block.material.Materials;
 import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.world.World;
@@ -11,7 +12,7 @@ import silveon22.deep.item.DEEPItems;
 
 public class BlockLogicTopazOre extends BlockLogic {
 	public BlockLogicTopazOre(Block block) {
-		super(block, Material.stone);
+		super(block, Materials.STONE);
 	}
 
 	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {
