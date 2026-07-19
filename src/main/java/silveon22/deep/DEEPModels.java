@@ -23,147 +23,111 @@ public class DEEPModels implements ModelEntrypoint {
 	public void initBlockModels(BlockModelDispatcher dispatcher) {
 
 		// Creating a standard block model (full block) an "applying" to the block data.
-		ModelHelper.setBlockModel(rhodoniteBlock, () -> new BlockModelStandard<>(rhodoniteBlock)
-				.setTex(MOD_ID + ":block/block_rhodonite", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(rhodoniteBrick, () -> new BlockModelStandard<>(rhodoniteBrick)
-				.setTex(MOD_ID + ":block/brick_rhodonite", Side.sides)
-			// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
+		dispatcher.addDispatch(new BlockModelStandard<>(rhodoniteBlock).setTex(MOD_ID + ":block/block_rhodonite", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(rhodoniteBrick).setTex(MOD_ID + ":block/brick_rhodonite", Side.sides));
 		dispatcher.addDispatch(new BlockModelSlab<>(DEEPBlocks.slabRhodoniteBrick));
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsRhodoniteBrick));
-		ModelHelper.setBlockModel(netherrackRhodoniteOre, () -> new BlockModelStandard<>(netherrackRhodoniteOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(netherrackRhodoniteOre)
 				.setTex(MOD_ID + ":block/ore/rhodonite/netherrack", Side.sides)
-				.setTex(MOD_ID + ":block/ore/rhodonite/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(amethystBlock, () -> new BlockModelStandard<>(amethystBlock)
-				.setTex(MOD_ID + ":block/block_amethyst", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(stoneAmethystOre, () -> new BlockModelStandard<>(stoneAmethystOre)
-				.setTex(MOD_ID + ":block/ore/amethyst/stone", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(basaltAmethystOre, () -> new BlockModelStandard<>(basaltAmethystOre)
-				.setTex(MOD_ID + ":block/ore/amethyst/basalt", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(limestoneAmethystOre, () -> new BlockModelStandard<>(limestoneAmethystOre)
-				.setTex(MOD_ID + ":block/ore/amethyst/limestone", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(graniteAmethystOre, () -> new BlockModelStandard<>(graniteAmethystOre)
-				.setTex(MOD_ID + ":block/ore/amethyst/granite", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(permafrostAmethystOre, () -> new BlockModelStandard<>(permafrostAmethystOre)
-				.setTex(MOD_ID + ":block/ore/amethyst/permafrost", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(silverBlock, () -> new BlockModelStandard<>(silverBlock)
-				.setTex(MOD_ID + ":block/block_silver", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(stoneSilverOre, () -> new BlockModelStandard<>(stoneSilverOre)
+				.onRenderLayer(1)
+				.setTex(MOD_ID + ":block/ore/rhodonite/overlay", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(amethystBlock).setTex(MOD_ID + ":block/block_amethyst", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(stoneAmethystOre)
+				.setTex(MOD_ID + ":block/ore/amethyst/stone", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(basaltAmethystOre)
+				.setTex(MOD_ID + ":block/ore/amethyst/basalt", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(limestoneAmethystOre)
+				.setTex(MOD_ID + ":block/ore/amethyst/limestone", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(graniteAmethystOre)
+				.setTex(MOD_ID + ":block/ore/amethyst/granite", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(permafrostAmethystOre)
+				.setTex(MOD_ID + ":block/ore/amethyst/permafrost", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(silverBlock).setTex(MOD_ID + ":block/block_silver", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(stoneSilverOre)
 				.setTex(MOD_ID + ":block/ore/silver/stone", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(basaltSilverOre, () -> new BlockModelStandard<>(basaltSilverOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(basaltSilverOre)
 				.setTex(MOD_ID + ":block/ore/silver/basalt", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(limestoneSilverOre, () -> new BlockModelStandard<>(limestoneSilverOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(limestoneSilverOre)
 				.setTex(MOD_ID + ":block/ore/silver/limestone", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(graniteSilverOre, () -> new BlockModelStandard<>(graniteSilverOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(graniteSilverOre)
 				.setTex(MOD_ID + ":block/ore/silver/granite", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(permafrostSilverOre, () -> new BlockModelStandard<>(permafrostSilverOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(permafrostSilverOre)
 				.setTex(MOD_ID + ":block/ore/silver/permafrost", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(netherrackSilverOre, () -> new BlockModelStandard<>(netherrackSilverOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(netherrackSilverOre)
 				.setTex(MOD_ID + ":block/ore/silver/netherrack", Side.sides)
+				.onRenderLayer(1)
 				.setTex(MOD_ID + ":block/ore/silver/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(uraniumBlock, () -> new BlockModelStandard<>(uraniumBlock)
-				.setTex(MOD_ID + ":block/block_uranium", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(stoneUraniumOre, () -> new BlockModelStandard<>(stoneUraniumOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(uraniumBlock).setTex(MOD_ID + ":block/block_uranium", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(stoneUraniumOre)
 				.setTex(MOD_ID + ":block/ore/uranium/stone", Side.sides)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(basaltUraniumOre, () -> new BlockModelStandard<>(basaltUraniumOre)
+				.onRenderLayer(1)
+				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(basaltUraniumOre)
 				.setTex(MOD_ID + ":block/ore/uranium/basalt", Side.sides)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(limestoneUraniumOre, () -> new BlockModelStandard<>(limestoneUraniumOre)
+				.onRenderLayer(1)
+				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(limestoneUraniumOre)
 				.setTex(MOD_ID + ":block/ore/uranium/limestone", Side.sides)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(graniteUraniumOre, () -> new BlockModelStandard<>(graniteUraniumOre)
+				.onRenderLayer(1)
+				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(graniteUraniumOre)
 				.setTex(MOD_ID + ":block/ore/uranium/granite", Side.sides)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(permafrostUraniumOre, () -> new BlockModelStandard<>(permafrostUraniumOre)
+				.onRenderLayer(1)
+				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(permafrostUraniumOre)
 				.setTex(MOD_ID + ":block/ore/uranium/permafrost", Side.sides)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(leadBlock, () -> new BlockModelStandard<>(leadBlock)
-				.setTex(MOD_ID + ":block/block_lead", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(leadedGlass, () -> new BlockModelTransparent<>(leadedGlass,false).onRenderLayer(1)
-				.setTex(MOD_ID + ":block/glass_leaded", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
-		ModelHelper.setBlockModel(stoneLeadOre, () -> new BlockModelStandard<>(stoneLeadOre)
+				.onRenderLayer(1)
+				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(leadBlock)
+				.setTex(MOD_ID + ":block/block_lead", Side.sides));
+		dispatcher.addDispatch(new BlockModelTransparent<>(leadedGlass,false).onRenderLayer(1).setTex(MOD_ID + ":block/glass_leaded", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(stoneLeadOre)
 				.setTex(MOD_ID + ":block/ore/lead/stone", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(basaltLeadOre, () -> new BlockModelStandard<>(basaltLeadOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(basaltLeadOre)
 				.setTex(MOD_ID + ":block/ore/lead/basalt", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(limestoneLeadOre, () -> new BlockModelStandard<>(limestoneLeadOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(limestoneLeadOre)
 				.setTex(MOD_ID + ":block/ore/lead/limestone", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(graniteLeadOre, () -> new BlockModelStandard<>(graniteLeadOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(graniteLeadOre)
 				.setTex(MOD_ID + ":block/ore/lead/granite", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(permafrostLeadOre, () -> new BlockModelStandard<>(permafrostLeadOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(permafrostLeadOre)
 				.setTex(MOD_ID + ":block/ore/lead/permafrost", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(blockClayRed, () -> new BlockModelStandard<>(blockClayRed)
+		dispatcher.addDispatch(new BlockModelStandard<>(blockClayRed)
 				.setTex(MOD_ID + ":block/block_clay_red", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(brickClayBlue, () -> new BlockModelStandard<>(brickClayBlue)
+		dispatcher.addDispatch(new BlockModelStandard<>(brickClayBlue)
 				.setTex(MOD_ID + ":block/brick_clay_blue", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
 		dispatcher.addDispatch(new BlockModelSlab<>(DEEPBlocks.slabBrickClayBlue));
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsBrickClayBlue));
-		ModelHelper.setBlockModel(tileCeramicBlue, () -> new BlockModelStandard<>(tileCeramicBlue)
+		dispatcher.addDispatch(new BlockModelStandard<>(tileCeramicBlue)
 				.setTex(MOD_ID + ":block/tiles_ceramic_blue", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
-		ModelHelper.setBlockModel(tileCeramicRed, () -> new BlockModelStandard<>(tileCeramicRed)
+		dispatcher.addDispatch(new BlockModelStandard<>(tileCeramicRed)
 				.setTex(MOD_ID + ":block/tiles_ceramic_red", Side.sides) // setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
@@ -171,8 +135,9 @@ public class DEEPModels implements ModelEntrypoint {
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsTileCeramicBlue));
 		dispatcher.addDispatch(new BlockModelSlab<>(DEEPBlocks.slabTileCeramicRed));
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsTileCeramicRed));
-		ModelHelper.setBlockModel(netherrackTopazOre, () -> new BlockModelStandard<>(netherrackTopazOre)
+		dispatcher.addDispatch(new BlockModelStandard<>(netherrackTopazOre)
 				.setTex(MOD_ID + ":block/ore/topaz/netherrack", Side.sides)
+				.onRenderLayer(1)
 				.setTex(MOD_ID + ":block/ore/topaz/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
