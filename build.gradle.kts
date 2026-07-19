@@ -60,7 +60,6 @@ dependencies {
 	implementation(libs.log4j.api)
 	implementation(libs.log4j.api12)
 	implementation(libs.gson)
-	implementation(files("libs/silveon22.deep-1.0.0-sources.jar"))
 
 	implementation(libs.commonsLang3)
 	include(libs.commonsLang3)
