@@ -90,7 +90,7 @@ public class DEEPBlocks {
 			.setResistance(1.0f)
 			.setLuminance(0)
 			.setUseInternalLight()
-			.setVisualUpdateOnMetadata()
+//			.setVisualUpdateOnMetadata()
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 		stairsRhodoniteBrick = stairs_rhodonite_brick_builder.build("block.stairs.rhodonitebrick", "block/rhodonite_brick_stairs", 9810, b -> new BlockLogicStairs(b, rhodoniteBrick));
 		miningLevels.put(stairsRhodoniteBrick,2);
@@ -313,7 +313,7 @@ public class DEEPBlocks {
 			.setHardness(1.0f)
 			.setLuminance(0)
 			.setUseInternalLight()
-			.setVisualUpdateOnMetadata()
+//			.setVisualUpdateOnMetadata()
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 		stairsBrickClayBlue = stairs_brick_clay_blue_builder.build("block.stairs.brick.clay.blue", "block/brick_clay_blue_stairs", 9841, b -> new BlockLogicStairs(b, brickClayBlue));
 
@@ -339,7 +339,7 @@ public class DEEPBlocks {
 			.setHardness(1.0f)
 			.setLuminance(0)
 			.setUseInternalLight()
-			.setVisualUpdateOnMetadata()
+//			.setVisualUpdateOnMetadata()
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 		stairsTileCeramicBlue = stairs_tile_ceramic_blue_builder.build("block.stairs.tile.ceramic.blue", "block/tile_ceramic_blue_stairs", 9845, b -> new BlockLogicStairs(b, tileCeramicBlue));
 
@@ -353,7 +353,7 @@ public class DEEPBlocks {
 			.setHardness(1.0f)
 			.setLuminance(0)
 			.setUseInternalLight()
-			.setVisualUpdateOnMetadata()
+//			.setVisualUpdateOnMetadata()
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
 		stairsTileCeramicRed = stairs_tile_ceramic_red_builder.build("block.stairs.tile.ceramic.red", "block/tile_ceramic_red_stairs", 9847, b -> new BlockLogicStairs(b, tileCeramicRed));
 
