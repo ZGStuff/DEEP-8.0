@@ -148,178 +148,49 @@ public class DEEPModels implements ModelEntrypoint {
 
 	@Override
 	public void initItemModels(ItemModelDispatcher dispatcher) {
-		ModelHelper.setItemModel(DEEPItems.rhodonite,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.rhodonite, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/rhodonite"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethyst,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethyst, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystPickaxe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystPickaxe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_pickaxe_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystAxe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystAxe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_axe_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystSword,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystSword, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_sword_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystShovel,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystShovel, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_shovel_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystHoe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystHoe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_hoe_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystHelmet,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystHelmet, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_helmet_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystChestplate,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystChestplate, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_chestplate_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystLeggings,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystLeggings, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_leggings_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.amethystBoots,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.amethystBoots, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_boots_amethyst"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.rawSilver,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.rawSilver, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/ore_raw_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.ingotSilver,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.ingotSilver, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/ingot_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverHelmet,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverHelmet, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_helmet_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverChestplate,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverChestplate, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_chestplate_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverLeggings,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverLeggings, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_leggings_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverBoots,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverBoots, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/armor_boots_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverPickaxe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverPickaxe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_pickaxe_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverAxe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverAxe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_axe_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverSword,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverSword, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_sword_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverShovel,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverShovel, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_shovel_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.silverHoe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.silverHoe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_hoe_silver"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.uranium,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.uranium, MOD_ID).setFullBright();
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/uranium"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.rawLead,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.rawLead, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/ore_raw_lead"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.ingotLead,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.ingotLead, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/ingot_lead"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.leadPickaxe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.leadPickaxe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_pickaxe_lead"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.leadAxe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.leadAxe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_axe_lead"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.leadSword,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.leadSword, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_sword_lead"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.leadShovel,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.leadShovel, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_shovel_lead"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.leadHoe,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.leadHoe, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/tool_hoe_lead"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.clayRed,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.clayRed, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/clay_red"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.clayBrickBlue,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.clayBrickBlue, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/brick_clay_blue"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.niter,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.niter, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/niter"));
-			return model;
-		});
-		ModelHelper.setItemModel(DEEPItems.topaz,()->{
-			ItemModelStandard model = new ItemModelStandard(DEEPItems.topaz, MOD_ID);
-			model.icon = TextureRegistry.getTexture(NamespaceID.getTemp(MOD_ID,"item/topaz"));
-			return model;
-		});
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.rhodonite));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethyst));
 
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystAxe));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystHoe));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystSword));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystShovel));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystPickaxe));
 
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystHelmet));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystChestplate));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystLeggings));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.amethystBoots));
+
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.rawSilver));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.ingotSilver));
+
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverBoots));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverHelmet));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverChestplate));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverLeggings));
+
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverAxe));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverHoe));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverSword));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverShovel));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.silverPickaxe));
+
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.uranium));
+
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.rawLead));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.ingotLead));
+
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.leadAxe));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.leadHoe));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.leadSword));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.leadShovel));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.leadPickaxe));
+
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.clayRed));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.clayBrickBlue));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.niter));
+		dispatcher.addDispatch(new ItemModelStandard(DEEPItems.topaz));
 	}
 
 	@Override
