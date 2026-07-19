@@ -1,5 +1,6 @@
 package silveon22.deep.block.ore;
 
+import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogic;
 import net.minecraft.core.block.entity.TileEntity;
@@ -11,7 +12,7 @@ import net.minecraft.core.world.generate.feature.WorldFeatureOre;
 import silveon22.deep.item.DEEPItems;
 
 public class BlockLogicSilverOre extends BlockLogic {
-	public static WorldFeatureOre.OreMap variantMap = new WorldFeatureOre.OreMap();
+	public static Int2IntArrayMap variantMap = new Int2IntArrayMap();
 
 	public BlockLogicSilverOre(Block<?> block, Block<?> parentBlock, Material material) {
 		super(block, material);

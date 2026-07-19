@@ -5,6 +5,7 @@ import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.material.Materials;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.sound.BlockSounds;
+import silveon22.deep.block.ore.*;
 import turniplabs.halplibe.helper.BlockBuilder;
 
 import static net.minecraft.core.item.tool.ItemToolPickaxe.miningLevels;
@@ -73,7 +74,7 @@ public class DEEPBlocks {
 			.setResistance(1.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		rhodoniteBrick = rhodonite_brick_builder.build("block.rhodonitebrick", "block/rhodonite_brick", 9808, b -> new BlockLogic(b, Materials.metal));
+		rhodoniteBrick = rhodonite_brick_builder.build("block.rhodonitebrick", "block/rhodonite_brick", 9808, b -> new BlockLogic(b, Materials.METAL));
 		miningLevels.put(rhodoniteBrick,2);
 
 		BlockBuilder slab_rhodonite_brick_builder = new BlockBuilder(MOD_ID)
@@ -106,42 +107,42 @@ public class DEEPBlocks {
 			.setResistance(1.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		amethystBlock = amethyst_block_builder.build("block.amethystblock", "block/amethyst_block", 9812, b -> new BlockLogic(b, Materials.metal));
+		amethystBlock = amethyst_block_builder.build("block.amethystblock", "block/amethyst_block", 9812, b -> new BlockLogic(b, Materials.METAL));
 		miningLevels.put(amethystBlock,2);
 
 		BlockBuilder stone_amethyst_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		stoneAmethystOre = stone_amethyst_ore_builder.build("block.ore.stone.amethyst", "block/stone_amethyst_ore", 9813,  (b) -> new BlockLogicAmethystOre(b, Blocks.STONE, Materials.stone));
+		stoneAmethystOre = stone_amethyst_ore_builder.build("block.ore.stone.amethyst", "block/stone_amethyst_ore", 9813,  (b) -> new BlockLogicAmethystOre(b, Blocks.STONE, Materials.STONE));
 		miningLevels.put(stoneAmethystOre,2);
 
 		BlockBuilder basalt_amethyst_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		basaltAmethystOre = basalt_amethyst_ore_builder.build("block.ore.basalt.amethyst", "block/basalt_amethyst_ore", 9814,  (b) -> new BlockLogicAmethystOre(b, Blocks.BASALT, Materials.basalt));
+		basaltAmethystOre = basalt_amethyst_ore_builder.build("block.ore.basalt.amethyst", "block/basalt_amethyst_ore", 9814,  (b) -> new BlockLogicAmethystOre(b, Blocks.BASALT, Materials.BASALT));
 		miningLevels.put(basaltAmethystOre,2);
 
 		BlockBuilder limestone_amethyst_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		limestoneAmethystOre = limestone_amethyst_ore_builder.build("block.ore.limestone.amethyst", "block/limestone_amethyst_ore", 9815,  (b) -> new BlockLogicAmethystOre(b, Blocks.LIMESTONE, Materials.limestone));
+		limestoneAmethystOre = limestone_amethyst_ore_builder.build("block.ore.limestone.amethyst", "block/limestone_amethyst_ore", 9815,  (b) -> new BlockLogicAmethystOre(b, Blocks.LIMESTONE, Materials.LIMESTONE));
 		miningLevels.put(limestoneAmethystOre,2);
 
 		BlockBuilder granite_amethyst_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		graniteAmethystOre = granite_amethyst_ore_builder.build("block.ore.granite.amethyst", "block/granite_amethyst_ore", 9816,  (b) -> new BlockLogicAmethystOre(b, Blocks.GRANITE, Materials.granite));
+		graniteAmethystOre = granite_amethyst_ore_builder.build("block.ore.granite.amethyst", "block/granite_amethyst_ore", 9816,  (b) -> new BlockLogicAmethystOre(b, Blocks.GRANITE, Materials.GRANITE));
 		miningLevels.put(graniteAmethystOre,2);
 
 		BlockBuilder permafrost_amethyst_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		permafrostAmethystOre = permafrost_amethyst_ore_builder.build("block.ore.permafrost.amethyst", "block/permafrost_amethyst_ore", 9817,  (b) -> new BlockLogicAmethystOre(b, Blocks.PERMAFROST, Materials.permafrost));
+		permafrostAmethystOre = permafrost_amethyst_ore_builder.build("block.ore.permafrost.amethyst", "block/permafrost_amethyst_ore", 9817,  (b) -> new BlockLogicAmethystOre(b, Blocks.PERMAFROST, Materials.PERMAFROST));
 		miningLevels.put(permafrostAmethystOre,2);
 
 		BlockBuilder silver_block_builder = new BlockBuilder(MOD_ID)
@@ -149,42 +150,42 @@ public class DEEPBlocks {
 			.setResistance(1.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		silverBlock = silver_block_builder.build("block.silverblock", "block/silver_block", 9818, b -> new BlockLogic(b, Materials.metal));
+		silverBlock = silver_block_builder.build("block.silverblock", "block/silver_block", 9818, b -> new BlockLogic(b, Materials.METAL));
 		miningLevels.put(silverBlock,2);
 
 		BlockBuilder stone_silver_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		stoneSilverOre = stone_silver_ore_builder.build("block.ore.stone.silver", "block/stone_silver_ore", 9819,  (b) -> new BlockLogicSilverOre(b, Blocks.STONE, Materials.stone));
+		stoneSilverOre = stone_silver_ore_builder.build("block.ore.stone.silver", "block/stone_silver_ore", 9819,  (b) -> new BlockLogicSilverOre(b, Blocks.STONE, Materials.STONE));
 		miningLevels.put(stoneSilverOre,2);
 
 		BlockBuilder basalt_silver_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		basaltSilverOre = basalt_silver_ore_builder.build("block.ore.basalt.silver", "block/basalt_silver_ore", 9820,  (b) -> new BlockLogicSilverOre(b, Blocks.BASALT, Materials.basalt));
+		basaltSilverOre = basalt_silver_ore_builder.build("block.ore.basalt.silver", "block/basalt_silver_ore", 9820,  (b) -> new BlockLogicSilverOre(b, Blocks.BASALT, Materials.BASALT));
 		miningLevels.put(basaltSilverOre,2);
 
 		BlockBuilder limestone_silver_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		limestoneSilverOre = limestone_silver_ore_builder.build("block.ore.limestone.silver", "block/limestone_silver_ore", 9821,  (b) -> new BlockLogicSilverOre(b, Blocks.LIMESTONE, Materials.limestone));
+		limestoneSilverOre = limestone_silver_ore_builder.build("block.ore.limestone.silver", "block/limestone_silver_ore", 9821,  (b) -> new BlockLogicSilverOre(b, Blocks.LIMESTONE, Materials.LIMESTONE));
 		miningLevels.put(limestoneSilverOre,2);
 
 		BlockBuilder granite_silver_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		graniteSilverOre = granite_silver_ore_builder.build("block.ore.granite.silver", "block/granite_silver_ore", 9822,  (b) -> new BlockLogicSilverOre(b, Blocks.GRANITE, Materials.granite));
+		graniteSilverOre = granite_silver_ore_builder.build("block.ore.granite.silver", "block/granite_silver_ore", 9822,  (b) -> new BlockLogicSilverOre(b, Blocks.GRANITE, Materials.GRANITE));
 		miningLevels.put(graniteSilverOre,2);
 
 		BlockBuilder permafrost_silver_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		permafrostSilverOre = permafrost_silver_ore_builder.build("block.ore.permafrost.silver", "block/permafrost_silver_ore", 9823,  (b) -> new BlockLogicSilverOre(b, Blocks.PERMAFROST, Materials.permafrost));
+		permafrostSilverOre = permafrost_silver_ore_builder.build("block.ore.permafrost.silver", "block/permafrost_silver_ore", 9823,  (b) -> new BlockLogicSilverOre(b, Blocks.PERMAFROST, Materials.PERMAFROST));
 		miningLevels.put(permafrostSilverOre,2);
 
 		BlockBuilder uranium_block_builder = new BlockBuilder(MOD_ID)
@@ -192,42 +193,42 @@ public class DEEPBlocks {
 			.setResistance(1.0f)
 			.setLuminance(8)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		uraniumBlock = uranium_block_builder.build("block.uraniumblock", "block/uranium_block", 9824, b -> new BlockLogic(b, Materials.stone));
+		uraniumBlock = uranium_block_builder.build("block.uraniumblock", "block/uranium_block", 9824, b -> new BlockLogic(b, Materials.STONE));
 		miningLevels.put(uraniumBlock,2);
 
 		BlockBuilder stone_uranium_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		stoneUraniumOre = stone_uranium_ore_builder.build("block.ore.stone.uranium", "block/stone_uranium_ore", 9825,  (b) -> new BlockLogicUraniumOre(b, Blocks.STONE, Materials.stone));
+		stoneUraniumOre = stone_uranium_ore_builder.build("block.ore.stone.uranium", "block/stone_uranium_ore", 9825,  (b) -> new BlockLogicUraniumOre(b, Blocks.STONE, Materials.STONE));
 		miningLevels.put(stoneUraniumOre,2);
 
 		BlockBuilder basalt_uranium_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		basaltUraniumOre = basalt_uranium_ore_builder.build("block.ore.basalt.uranium", "block/basalt_uranium_ore", 9826,  (b) -> new BlockLogicUraniumOre(b, Blocks.BASALT, Materials.basalt));
+		basaltUraniumOre = basalt_uranium_ore_builder.build("block.ore.basalt.uranium", "block/basalt_uranium_ore", 9826,  (b) -> new BlockLogicUraniumOre(b, Blocks.BASALT, Materials.BASALT));
 		miningLevels.put(basaltUraniumOre,2);
 
 		BlockBuilder limestone_uranium_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		limestoneUraniumOre = limestone_uranium_ore_builder.build("block.ore.limestone.uranium", "block/limestone_uranium_ore", 9827,  (b) -> new BlockLogicUraniumOre(b, Blocks.LIMESTONE, Materials.limestone));
+		limestoneUraniumOre = limestone_uranium_ore_builder.build("block.ore.limestone.uranium", "block/limestone_uranium_ore", 9827,  (b) -> new BlockLogicUraniumOre(b, Blocks.LIMESTONE, Materials.LIMESTONE));
 		miningLevels.put(limestoneUraniumOre,2);
 
 		BlockBuilder granite_uranium_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		graniteUraniumOre = granite_uranium_ore_builder.build("block.ore.granite.uranium", "block/granite_uranium_ore", 9828,  (b) -> new BlockLogicUraniumOre(b, Blocks.GRANITE, Materials.granite));
+		graniteUraniumOre = granite_uranium_ore_builder.build("block.ore.granite.uranium", "block/granite_uranium_ore", 9828,  (b) -> new BlockLogicUraniumOre(b, Blocks.GRANITE, Materials.GRANITE));
 		miningLevels.put(graniteUraniumOre,2);
 
 		BlockBuilder permafrost_uranium_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		permafrostUraniumOre = permafrost_uranium_ore_builder.build("block.ore.permafrost.uranium", "block/permafrost_uranium_ore", 9829,  (b) -> new BlockLogicUraniumOre(b, Blocks.PERMAFROST, Materials.permafrost));
+		permafrostUraniumOre = permafrost_uranium_ore_builder.build("block.ore.permafrost.uranium", "block/permafrost_uranium_ore", 9829,  (b) -> new BlockLogicUraniumOre(b, Blocks.PERMAFROST, Materials.PERMAFROST));
 		miningLevels.put(permafrostUraniumOre,2);
 
 		BlockBuilder lead_block_builder = new BlockBuilder(MOD_ID)
@@ -235,7 +236,7 @@ public class DEEPBlocks {
 			.setResistance(1.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		leadBlock = lead_block_builder.build("block.leadblock", "block/lead_block", 9830, b -> new BlockLogic(b, Materials.metal));
+		leadBlock = lead_block_builder.build("block.leadblock", "block/lead_block", 9830, b -> new BlockLogic(b, Materials.METAL));
 		miningLevels.put(leadBlock,1);
 
 		BlockBuilder leaded_glass_builder = new BlockBuilder(MOD_ID)
@@ -245,48 +246,48 @@ public class DEEPBlocks {
 			.setLightOpacity(0)
 			.setBlockSound(BlockSounds.GLASS)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		leadedGlass = leaded_glass_builder.build("block.leadedglass", "block/leaded_glass", 9831, b -> new BlockLogicTransparent(b, Materials.glass));
+		leadedGlass = leaded_glass_builder.build("block.leadedglass", "block/leaded_glass", 9831, b -> new BlockLogicTransparent(b, Materials.GLASS));
 
 		BlockBuilder stone_lead_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		stoneLeadOre = stone_lead_ore_builder.build("block.ore.stone.lead", "block/stone_lead_ore", 9832,  (b) -> new BlockLogicLeadOre(b, Blocks.STONE, Materials.stone));
+		stoneLeadOre = stone_lead_ore_builder.build("block.ore.stone.lead", "block/stone_lead_ore", 9832,  (b) -> new BlockLogicLeadOre(b, Blocks.STONE, Materials.STONE));
 		miningLevels.put(stoneLeadOre,1);
 
 		BlockBuilder basalt_lead_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		basaltLeadOre = basalt_lead_ore_builder.build("block.ore.basalt.lead", "block/basalt_lead_ore", 9833,  (b) -> new BlockLogicLeadOre(b, Blocks.BASALT, Materials.basalt));
+		basaltLeadOre = basalt_lead_ore_builder.build("block.ore.basalt.lead", "block/basalt_lead_ore", 9833,  (b) -> new BlockLogicLeadOre(b, Blocks.BASALT, Materials.BASALT	));
 		miningLevels.put(basaltLeadOre,1);
 
 		BlockBuilder limestone_lead_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		limestoneLeadOre = limestone_lead_ore_builder.build("block.ore.limestone.lead", "block/limestone_lead_ore", 9834,  (b) -> new BlockLogicLeadOre(b, Blocks.LIMESTONE, Materials.limestone));
+		limestoneLeadOre = limestone_lead_ore_builder.build("block.ore.limestone.lead", "block/limestone_lead_ore", 9834,  (b) -> new BlockLogicLeadOre(b, Blocks.LIMESTONE, Materials.LIMESTONE));
 		miningLevels.put(limestoneLeadOre,1);
 
 		BlockBuilder granite_lead_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		graniteLeadOre = granite_lead_ore_builder.build("block.ore.granite.lead", "block/granite_lead_ore", 9835,  (b) -> new BlockLogicLeadOre(b, Blocks.GRANITE, Materials.granite));
+		graniteLeadOre = granite_lead_ore_builder.build("block.ore.granite.lead", "block/granite_lead_ore", 9835,  (b) -> new BlockLogicLeadOre(b, Blocks.GRANITE, Materials.GRANITE));
 		miningLevels.put(graniteLeadOre,1);
 
 		BlockBuilder permafrost_lead_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		permafrostLeadOre = permafrost_lead_ore_builder.build("block.ore.permafrost.lead", "block/permafrost_lead_ore", 9836,  (b) -> new BlockLogicLeadOre(b, Blocks.PERMAFROST, Materials.permafrost));
+		permafrostLeadOre = permafrost_lead_ore_builder.build("block.ore.permafrost.lead", "block/permafrost_lead_ore", 9836,  (b) -> new BlockLogicLeadOre(b, Blocks.PERMAFROST, Materials.PERMAFROST));
 		miningLevels.put(permafrostLeadOre,1);
 
 		BlockBuilder netherrack_silver_ore_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
 			.setLuminance(6)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		netherrackSilverOre = netherrack_silver_ore_builder.build("block.ore.netherrack.silver", "block/netherrack_silver_ore", 9837,  (b) -> new BlockLogicSilverOre(b, Blocks.NETHERRACK, Materials.netherrack));
+		netherrackSilverOre = netherrack_silver_ore_builder.build("block.ore.netherrack.silver", "block/netherrack_silver_ore", 9837,  (b) -> new BlockLogicSilverOre(b, Blocks.NETHERRACK, Materials.NETHERRACK));
 		miningLevels.put(netherrackSilverOre,2);
 
 		BlockBuilder block_clay_red_builder = new BlockBuilder(MOD_ID)
@@ -300,7 +301,7 @@ public class DEEPBlocks {
 			.setHardness(1.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		brickClayBlue = brick_clay_blue_builder.build("block.brick.clay.blue", "block/brick_clay_blue", 9839,  (b) -> new BlockLogic(b, Materials.stone));
+		brickClayBlue = brick_clay_blue_builder.build("block.brick.clay.blue", "block/brick_clay_blue", 9839,  (b) -> new BlockLogic(b, Materials.STONE));
 
 		BlockBuilder slab_brick_clay_blue_builder = new BlockBuilder(MOD_ID)
 			.setHardness(1.0f)
@@ -320,13 +321,13 @@ public class DEEPBlocks {
 			.setHardness(1.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		tileCeramicBlue = tile_ceramic_blue_builder.build("block.tile.ceramic.blue", "block/tile_ceramic_blue", 9842,  (b) -> new BlockLogic(b, Materials.stone));
+		tileCeramicBlue = tile_ceramic_blue_builder.build("block.tile.ceramic.blue", "block/tile_ceramic_blue", 9842,  (b) -> new BlockLogic(b, Materials.STONE));
 
 		BlockBuilder tile_ceramic_red_builder = new BlockBuilder(MOD_ID)
 			.setHardness(1.0f)
 			.setLuminance(0)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		tileCeramicRed = tile_ceramic_red_builder.build("block.tile.ceramic.red", "block/tile_ceramic_red", 9843,  (b) -> new BlockLogic(b, Materials.stone));
+		tileCeramicRed = tile_ceramic_red_builder.build("block.tile.ceramic.red", "block/tile_ceramic_red", 9843,  (b) -> new BlockLogic(b, Materials.STONE));
 
 		BlockBuilder slab_tile_ceramic_blue_builder = new BlockBuilder(MOD_ID)
 			.setHardness(1.0f)
