@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import silveon22.deep.block.DEEPBlocks;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 import turniplabs.halplibe.util.RecipeEntrypoint;
+import turniplabs.halplibe.HalpLibe;
 
 
 public class Deep implements ModInitializer, RecipeEntrypoint, GameStartEntrypoint {
@@ -15,6 +16,7 @@ public class Deep implements ModInitializer, RecipeEntrypoint, GameStartEntrypoi
     public void onInitialize() {
 		DEEPBlocks.initBlocks();
         LOGGER.info("DEEP initialized.");
+		HalpLibe.registerMod(MOD_ID);
     }
 
 	@Override
