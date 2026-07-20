@@ -1,5 +1,6 @@
 package silveon22.deep.block.ore;
 
+import it.unimi.dsi.fastutil.ints.Int2IntArrayMap;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogic;
 import net.minecraft.core.block.entity.TileEntity;
@@ -11,8 +12,11 @@ import net.minecraft.core.world.World;
 import silveon22.deep.item.DEEPItems;
 
 public class BlockLogicRhodoniteOre extends BlockLogic {
-	public BlockLogicRhodoniteOre(Block block) {
+	public static Int2IntArrayMap variantMap = new Int2IntArrayMap();
+
+	public BlockLogicRhodoniteOre(Block block, Block<?> parentBlock, Material material) {
 		super(block, Materials.STONE);
+		variantMap.put(parentBlock.id(), block.id());
 	}
 
 	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int x, int y, int z, int meta, TileEntity tileEntity) {

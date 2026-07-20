@@ -29,6 +29,10 @@ public class DEEPModels implements ModelEntrypoint {
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsRhodoniteBrick));
 		dispatcher.addDispatch(new BlockModelStandard<>(netherrackRhodoniteOre)
 				.setTex(MOD_ID + ":block/ore/rhodonite/netherrack", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(gloomstoneRhodoniteOre)
+			.setTex(MOD_ID + ":block/ore/rhodonite/gloomstone", Side.sides));
+		dispatcher.addDispatch(new BlockModelStandard<>(basaltRhodoniteOre)
+			.setTex(MOD_ID + ":block/ore/rhodonite/basalt", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(amethystBlock).setTex(MOD_ID + ":block/block_amethyst", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(stoneAmethystOre)
 				.setTex(MOD_ID + ":block/ore/amethyst/stone", Side.sides));

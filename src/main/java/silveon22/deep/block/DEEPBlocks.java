@@ -19,6 +19,8 @@ public class DEEPBlocks {
 	public static Block<?> rhodoniteBlock;
 	public static Block<?> rhodoniteBrick;
 	public static Block<?> netherrackRhodoniteOre;
+	public static Block<?> basaltRhodoniteOre;
+	public static Block<?> gloomstoneRhodoniteOre;
 	public static Block<BlockLogicSlab> slabRhodoniteBrick;
 	public static Block<BlockLogicStairs> stairsRhodoniteBrick;
 	public static Block<?> amethystBlock;
@@ -99,8 +101,22 @@ public class DEEPBlocks {
 			.setHardness(3.0f)
 			.setLuminance(6)
 			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
-		netherrackRhodoniteOre = netherrack_rhodonite_ore_builder.build("block.ore.netherrack.rhodonite", "block/netherrack_rhodonite_ore", 9811,  b -> new BlockLogicRhodoniteOre(b)).withBlastResistance(5.0F);
+		netherrackRhodoniteOre = netherrack_rhodonite_ore_builder.build("block.ore.netherrack.rhodonite", "block/netherrack_rhodonite_ore", 9811,  b -> new BlockLogicRhodoniteOre(b, Blocks.NETHERRACK, Materials.NETHERRACK)).withBlastResistance(5.0F);
 		miningLevels.put(netherrackRhodoniteOre,2);
+
+		BlockBuilder gloomstone_rhodonite_ore_builder = new BlockBuilder(MOD_ID)
+			.setHardness(3.0f)
+			.setLuminance(6)
+			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
+		gloomstoneRhodoniteOre = gloomstone_rhodonite_ore_builder.build("block.ore.gloomstone.rhodonite", "block/gloomstone_rhodonite_ore", 9849,  b -> new BlockLogicRhodoniteOre(b, Blocks.GLOOMSTONE, Materials.GLOOMSTONE)).withBlastResistance(5.0F);
+		miningLevels.put(gloomstoneRhodoniteOre,2);
+
+		BlockBuilder basalt_rhodonite_ore_builder = new BlockBuilder(MOD_ID)
+			.setHardness(3.0f)
+			.setLuminance(6)
+			.addTags(BlockTags.MINEABLE_BY_PICKAXE);
+		basaltRhodoniteOre = basalt_rhodonite_ore_builder.build("block.ore.basalt.rhodonite", "block/basalt_rhodonite_ore", 9850,  b -> new BlockLogicRhodoniteOre(b, Blocks.BASALT, Materials.BASALT)).withBlastResistance(5.0F);
+		miningLevels.put(basaltRhodoniteOre,2);
 
 		BlockBuilder amethyst_block_builder = new BlockBuilder(MOD_ID)
 			.setHardness(3.0f)
