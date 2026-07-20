@@ -26,6 +26,7 @@ public class BlockLogicRhodoniteOre extends BlockLogic {
 				return new ItemStack[]{new ItemStack(this)};
 			case EXPLOSION:
 			case PROPER_TOOL:
+			case PISTON_CRUSH:
 				return new ItemStack[]{new ItemStack((DEEPItems.rhodonite), 2 + world.rand.nextInt(4))};
 			default:
 				return null;

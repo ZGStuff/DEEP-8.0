@@ -79,25 +79,25 @@ public class DEEPItems implements ItemInitEntrypoint {
 		amethystHoe = new ItemBuilder(MOD_ID)
 			.build(new ItemToolHoe("amethysthoe", MOD_ID + ":item/amethyst_hoe", 28049, new ToolMaterial().setDurability(96).setEfficiency(55.0F, 100.0F).setMiningLevel(3).setDamage(5).setBlockHitDelay(0)));
 		amethystHelmet = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("amethysthelmet", "silveon22.deep:item/armor/amethyst_helmet", 28050, amethyst_Armor, HumanArmorShape.HEAD));
+			.build(new ItemArmor("amethysthelmet", "deep:item/armor/amethyst_helmet", 28050, amethyst_Armor, HumanArmorShape.HEAD));
 		amethystChestplate = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("amethystchestplate", "silveon22.deep:item/armor/amethyst_chestplate", 28051, amethyst_Armor, HumanArmorShape.CHEST));
+			.build(new ItemArmor("amethystchestplate", "deep:item/armor/amethyst_chestplate", 28051, amethyst_Armor, HumanArmorShape.CHEST));
 		amethystLeggings = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("amethystleggings", "silveon22.deep:item/armor/amethyst_leggings", 28052, amethyst_Armor, HumanArmorShape.LEGS));
+			.build(new ItemArmor("amethystleggings", "deep:item/armor/amethyst_leggings", 28052, amethyst_Armor, HumanArmorShape.LEGS));
 		amethystBoots = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("amethystboots", "silveon22.deep:item/armor/amethyst_boots", 28053, amethyst_Armor, HumanArmorShape.BOOTS));
+			.build(new ItemArmor("amethystboots", "deep:item/armor/amethyst_boots", 28053, amethyst_Armor, HumanArmorShape.BOOTS));
 		rawSilver = new ItemBuilder(MOD_ID)
 			.build(new Item("rawsilver", MOD_ID + ":item/raw_silver", 28054));
 		ingotSilver = new ItemBuilder(MOD_ID)
 			.build(new Item("ingotsilver", MOD_ID + ":item/ingot_silver", 28055));
 		silverHelmet = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("silverhelmet", "silveon22.deep:item/armor/silver_helmet", 28056, silver_Armor, HumanArmorShape.HEAD));
+			.build(new ItemArmor("silverhelmet", "deep:item/armor/silver_helmet", 28056, silver_Armor, HumanArmorShape.HEAD));
 		silverChestplate = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("silverchestplate", "silveon22.deep:item/armor/silver_chestplate", 28057, silver_Armor, HumanArmorShape.CHEST));
+			.build(new ItemArmor("silverchestplate", "deep:item/armor/silver_chestplate", 28057, silver_Armor, HumanArmorShape.CHEST));
 		silverLeggings = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("silverleggings", "silveon22.deep:item/armor/silver_leggings", 28058, silver_Armor, HumanArmorShape.LEGS));
+			.build(new ItemArmor("silverleggings", "deep:item/armor/silver_leggings", 28058, silver_Armor, HumanArmorShape.LEGS));
 		silverBoots = new ItemBuilder(MOD_ID)
-			.build(new ItemArmor("silverboots", "silveon22.deep:item/armor/silver_boots", 28059, silver_Armor, HumanArmorShape.BOOTS));
+			.build(new ItemArmor("silverboots", "deep:item/armor/silver_boots", 28059, silver_Armor, HumanArmorShape.BOOTS));
 		silverPickaxe = new ItemBuilder(MOD_ID)
 			.build(new ItemToolPickaxe("silverpickaxe", MOD_ID + ":item/silver_pickaxe", 28060, new ToolMaterial().setDurability(512).setEfficiency(4.0F, 9.0F).setMiningLevel(2).setSilkTouch(true)));
 		silverAxe = new ItemBuilder(MOD_ID)

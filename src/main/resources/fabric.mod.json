@@ -6,11 +6,11 @@
   "name": "DEEP",
   "description": "A mod that adds new materials, decorative blocks, recipes, and more to BTA. Now on 8.0!",
   "authors": [
-    "Silveecakes, Erisatis Alterna"
+    "Silvycakes, Erisatis Alterna"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://github.com/ZGStuff/DEEP-8.0",
+    "sources": "https://github.com/ZGStuff/DEEP-8.0"
   },
 
 	"icon": "icon.png",
