@@ -28,9 +28,7 @@ public class DEEPModels implements ModelEntrypoint {
 		dispatcher.addDispatch(new BlockModelSlab<>(DEEPBlocks.slabRhodoniteBrick));
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsRhodoniteBrick));
 		dispatcher.addDispatch(new BlockModelStandard<>(netherrackRhodoniteOre)
-				.setTex(MOD_ID + ":block/ore/rhodonite/netherrack", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/rhodonite/overlay", Side.sides));
+				.setTex(MOD_ID + ":block/ore/rhodonite/netherrack", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(amethystBlock).setTex(MOD_ID + ":block/block_amethyst", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(stoneAmethystOre)
 				.setTex(MOD_ID + ":block/ore/amethyst/stone", Side.sides));
@@ -64,32 +62,18 @@ public class DEEPModels implements ModelEntrypoint {
 			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
 		);
 		dispatcher.addDispatch(new BlockModelStandard<>(netherrackSilverOre)
-				.setTex(MOD_ID + ":block/ore/silver/netherrack", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/silver/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
+				.setTex(MOD_ID + ":block/ore/silver/netherrack", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(uraniumBlock).setTex(MOD_ID + ":block/block_uranium", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(stoneUraniumOre)
-				.setTex(MOD_ID + ":block/ore/uranium/stone", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+				.setTex(MOD_ID + ":block/ore/uranium/stone", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(basaltUraniumOre)
-				.setTex(MOD_ID + ":block/ore/uranium/basalt", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+				.setTex(MOD_ID + ":block/ore/uranium/basalt", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(limestoneUraniumOre)
-				.setTex(MOD_ID + ":block/ore/uranium/limestone", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+				.setTex(MOD_ID + ":block/ore/uranium/limestone", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(graniteUraniumOre)
-				.setTex(MOD_ID + ":block/ore/uranium/granite", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+				.setTex(MOD_ID + ":block/ore/uranium/granite", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(permafrostUraniumOre)
-				.setTex(MOD_ID + ":block/ore/uranium/permafrost", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/uranium/overlay", Side.sides));
+				.setTex(MOD_ID + ":block/ore/uranium/permafrost", Side.sides));
 		dispatcher.addDispatch(new BlockModelStandard<>(leadBlock)
 				.setTex(MOD_ID + ":block/block_lead", Side.sides));
 		dispatcher.addDispatch(new BlockModelTransparent<>(leadedGlass,false).onRenderLayer(1).setTex(MOD_ID + ":block/glass_leaded", Side.sides));
@@ -135,12 +119,7 @@ public class DEEPModels implements ModelEntrypoint {
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsTileCeramicBlue));
 		dispatcher.addDispatch(new BlockModelSlab<>(DEEPBlocks.slabTileCeramicRed));
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsTileCeramicRed));
-		dispatcher.addDispatch(new BlockModelStandard<>(netherrackTopazOre)
-				.setTex(MOD_ID + ":block/ore/topaz/netherrack", Side.sides)
-				.onRenderLayer(1)
-				.setTex(MOD_ID + ":block/ore/topaz/overlay", Side.sides)// setting the texture (don't forget the ':'). 'sides' can be: TOP, BOTTOM, NORTH, SOUTH, EAST, WEST
-			// In resources create a folder 'assets', inside it another folder 'yourmodname', inside it 'textures', inside it 'block'. Inside it put the textures of your blocks with names in snake_case
-		);
+		dispatcher.addDispatch(new BlockModelStandard<>(netherrackTopazOre).setTex(MOD_ID + ":block/ore/topaz/netherrack", Side.sides));
 
 
 
