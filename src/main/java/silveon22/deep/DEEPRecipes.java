@@ -508,7 +508,7 @@ public class DEEPRecipes implements RecipeEntrypoint {
 			.addEntry(new WeightedRandomLootObject(DEEPItems.niter.getDefaultStack(), 1, 3), 10);
 		RecipeBuilder.ModifyTrommel("minecraft", "dirt")
 			.addEntry(new WeightedRandomLootObject(DEEPItems.niter.getDefaultStack(), 1, 3), 10);
-		RecipeBuilder.ModifyTrommel("minecraft", "soul_sand")
+		RecipeBuilder.ModifyTrommel("minecraft", "soulsand")
 			.addEntry(new WeightedRandomLootObject(DEEPItems.rhodonite.getDefaultStack(), 2,6), 7);
 
 
