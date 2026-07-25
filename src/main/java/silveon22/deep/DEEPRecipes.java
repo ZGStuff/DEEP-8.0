@@ -382,7 +382,7 @@ public class DEEPRecipes implements RecipeEntrypoint {
 			.create("blueClayBrickStairs", new ItemStack(DEEPBlocks.stairsBrickClayBlue, 6));
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("C C"," C ")
-			.addInput('C',"silveon22.deep:clayBricks")
+			.addInput('C',DEEPBlocks.brickClayBlue)
 			.create("clayBowl", new ItemStack(Items.BOWL, 8));
 		RecipeBuilder.Shaped(MOD_ID)
 			.setShape("B","B")
@@ -510,9 +510,18 @@ public class DEEPRecipes implements RecipeEntrypoint {
 			.addEntry(new WeightedRandomLootObject(DEEPItems.niter.getDefaultStack(), 1, 3), 10);
 		RecipeBuilder.ModifyTrommel("minecraft", "soulsand")
 			.addEntry(new WeightedRandomLootObject(DEEPItems.rhodonite.getDefaultStack(), 2,6), 7);
-
-
-
+		RecipeBuilder.Trommel(MOD_ID)
+			.setInput(DEEPBlocks.netherrackRhodoniteOre)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.rhodonite, 1), 4, 8), 30)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_NETHERRACK, 1), 1, 2), 20);
+		RecipeBuilder.Trommel(MOD_ID)
+			.setInput(DEEPBlocks.gloomstoneRhodoniteOre)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.rhodonite, 1), 3, 6), 30)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_GLOOMSTONE, 1), 1, 2), 20);
+		RecipeBuilder.Trommel(MOD_ID)
+			.setInput(DEEPBlocks.basaltRhodoniteOre)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.rhodonite, 1), 3, 6), 30)
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_BASALT, 1), 1, 2), 20);
 	}
 
 	@Override
