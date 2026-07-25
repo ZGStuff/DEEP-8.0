@@ -115,15 +115,15 @@ public class DEEPItems implements ItemInitEntrypoint {
 		ingotLead = new ItemBuilder(MOD_ID)
 			.build(new Item("ingotlead", MOD_ID + ":item/ingot_lead", 28067));
 		leadPickaxe = new ItemBuilder(MOD_ID)
-			.build(new ItemToolPickaxe("leadpickaxe", MOD_ID + ":item/lead_pickaxe", 28068, new ToolMaterial().setDurability(512).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
+			.build(new ItemToolPickaxe("leadpickaxe", MOD_ID + ":item/lead_pickaxe", 28068, new ToolMaterial().setDurability(144).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
 		leadAxe = new ItemBuilder(MOD_ID)
-			.build(new ItemToolAxe("leadaxe", MOD_ID + ":item/lead_axe", 28069, new ToolMaterial().setDurability(512).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
+			.build(new ItemToolAxe("leadaxe", MOD_ID + ":item/lead_axe", 28069, new ToolMaterial().setDurability(144).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
 		leadSword = new ItemBuilder(MOD_ID)
-			.build(new ItemToolSword("leadsword", MOD_ID + ":item/lead_sword", 28071, new ToolMaterial().setDurability(512).setEfficiency(7.0F, 10.0F).setMiningLevel(2).setDamage(3)));
+			.build(new ItemToolSword("leadsword", MOD_ID + ":item/lead_sword", 28071, new ToolMaterial().setDurability(144).setEfficiency(7.0F, 10.0F).setMiningLevel(2).setDamage(3)));
 		leadShovel = new ItemBuilder(MOD_ID)
-			.build(new ItemToolShovel("leadshovel", MOD_ID + ":item/lead_shovel", 28072, new ToolMaterial().setDurability(512).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
+			.build(new ItemToolShovel("leadshovel", MOD_ID + ":item/lead_shovel", 28072, new ToolMaterial().setDurability(144).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
 		leadHoe = new ItemBuilder(MOD_ID)
-			.build(new ItemToolHoe("leadhoe", MOD_ID + ":item/lead_hoe", 28073, new ToolMaterial().setDurability(512).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
+			.build(new ItemToolHoe("leadhoe", MOD_ID + ":item/lead_hoe", 28073, new ToolMaterial().setDurability(144).setEfficiency(7.0F, 10.0F).setMiningLevel(2)));
 		clayRed = new ItemBuilder(MOD_ID)
 			.build(new Item("clayred", MOD_ID + ":item/clay_red", 28074));
 		clayBrickBlue = new ItemBuilder(MOD_ID)
