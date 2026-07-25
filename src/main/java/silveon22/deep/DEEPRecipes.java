@@ -513,15 +513,18 @@ public class DEEPRecipes implements RecipeEntrypoint {
 		RecipeBuilder.Trommel(MOD_ID)
 			.setInput(DEEPBlocks.netherrackRhodoniteOre)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.rhodonite, 1), 4, 8), 30)
-			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_NETHERRACK, 1), 1, 2), 20);
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_NETHERRACK, 1), 1, 2), 20)
+			.create("netherrack_rhodonite");
 		RecipeBuilder.Trommel(MOD_ID)
 			.setInput(DEEPBlocks.gloomstoneRhodoniteOre)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.rhodonite, 1), 3, 6), 30)
-			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_GLOOMSTONE, 1), 1, 2), 20);
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_GLOOMSTONE, 1), 1, 2), 20)
+			.create("gloomstone_rhodonite");
 		RecipeBuilder.Trommel(MOD_ID)
 			.setInput(DEEPBlocks.basaltRhodoniteOre)
 			.addEntry(new WeightedRandomLootObject(new ItemStack(DEEPItems.rhodonite, 1), 3, 6), 30)
-			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_BASALT, 1), 1, 2), 20);
+			.addEntry(new WeightedRandomLootObject(new ItemStack(Blocks.COBBLE_BASALT, 1), 1, 2), 20)
+			.create("basalt_rhodonite");
 	}
 
 	@Override
