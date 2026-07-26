@@ -4,7 +4,10 @@ import net.minecraft.core.block.*;
 import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.material.Materials;
 import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.sound.BlockSound;
 import net.minecraft.core.sound.BlockSounds;
+import silveon22.deep.block.misc.BlockLogicBrickOven;
+import silveon22.deep.block.misc.BlockLogicFreezer;
 import silveon22.deep.block.ore.*;
 import turniplabs.halplibe.helper.BlockBuilder;
 
@@ -59,6 +62,10 @@ public class DEEPBlocks {
 	public static Block<BlockLogicStairs> stairsTileCeramicRed;
 	public static Block<BlockLogicSlab> slabTileCeramicBlue;
 	public static Block<BlockLogicStairs> stairsTileCeramicBlue;
+	public static Block<?> brickOvenIdle;
+	public static Block<?> brickOvenActive;
+	public static Block<?> freezerIdle;
+	public static Block<?> freezerActive;
 	public static Block<?> netherrackTopazOre;
 
 	public static void initBlocks() {
@@ -380,8 +387,34 @@ public class DEEPBlocks {
 		netherrackTopazOre = netherrack_topaz_ore_builder.build("block.ore.netherrack.topaz", "block/netherrack_topaz_ore", 9848,  b -> new BlockLogicTopazOre(b)).withBlastResistance(5.0F);
 		miningLevels.put(netherrackTopazOre,2);
 
+		BlockBuilder brick_oven_idle_builder = new BlockBuilder(MOD_ID)
+			.setHardness(4.0f)
+			.setResistance(10.0f)
+			.setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.0f))
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
+		brickOvenIdle = brick_oven_idle_builder.build("block.oven.brick.idle", "block/brick_oven_idle", 10002, b -> new BlockLogicBrickOven(b, false));
 
+		BlockBuilder brick_oven_active_builder = new BlockBuilder(MOD_ID)
+			.setHardness(4.0f)
+			.setResistance(10.0f)
+			.setLuminance(13)
+			.setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.0f))
+			.setTags(BlockTags.NOT_IN_CREATIVE_MENU,BlockTags.MINEABLE_BY_PICKAXE);
+		brickOvenActive = brick_oven_active_builder.build("block.oven.brick.active", "block/brick_oven_active", 10003, b -> new BlockLogicBrickOven(b, true));
 
+		BlockBuilder freezer_idle_builder = new BlockBuilder(MOD_ID)
+			.setHardness(4.0f)
+			.setResistance(10.0f)
+			.setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.0f))
+			.setTags(BlockTags.MINEABLE_BY_PICKAXE);
+		freezerIdle = freezer_idle_builder.build("block.freezer.idle", "block/freezer_idle", 9879, b -> new BlockLogicFreezer(b, false));
 
+		BlockBuilder freezer_active_builder = new BlockBuilder(MOD_ID)
+			.setHardness(4.0f)
+			.setResistance(10.0f)
+			.setLuminance(8)
+			.setBlockSound(new BlockSound("step.stone", "step.stone", 1.0f, 1.0f))
+			.setTags(BlockTags.NOT_IN_CREATIVE_MENU,BlockTags.MINEABLE_BY_PICKAXE);
+		freezerActive = freezer_active_builder.build("block.freezer.active", "block/freezer_active", 9880, b -> new BlockLogicFreezer(b, true));
 	}
 }

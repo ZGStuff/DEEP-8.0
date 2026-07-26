@@ -11,7 +11,6 @@ import net.minecraft.core.util.collection.NamespaceID;
 import net.minecraft.core.util.helper.Side;
 import silveon22.deep.block.DEEPBlocks;
 import silveon22.deep.item.DEEPItems;
-import turniplabs.halplibe.helper.ModelHelper;
 import turniplabs.halplibe.util.ModelEntrypoint;
 
 import static silveon22.deep.Deep.MOD_ID;
@@ -125,8 +124,35 @@ public class DEEPModels implements ModelEntrypoint {
 		dispatcher.addDispatch(new BlockModelStairs<>(DEEPBlocks.stairsTileCeramicRed));
 		dispatcher.addDispatch(new BlockModelStandard<>(netherrackTopazOre).setTex(MOD_ID + ":block/ore/topaz/netherrack", Side.sides));
 
+		dispatcher.addDispatch(new BlockModelHorizontalRotation<>(brickOvenIdle)
+			.setTex(MOD_ID + ":block/brick_oven/side", Side.WEST)
+			.setTex(MOD_ID + ":block/brick_oven/side", Side.EAST)
+			.setTex(MOD_ID + ":block/brick_oven/side", Side.SOUTH)
+			.setTex(MOD_ID + ":block/brick_oven/top", Side.TOP)
+			.setTex(MOD_ID + ":block/brick_oven/top", Side.BOTTOM)
+			.setTex(MOD_ID + ":block/brick_oven/idle_front", Side.NORTH));
+		dispatcher.addDispatch(new BlockModelHorizontalRotation<>(brickOvenActive)
+			.setTex(MOD_ID + ":block/brick_oven/side", Side.WEST)
+			.setTex(MOD_ID + ":block/brick_oven/side", Side.EAST)
+			.setTex(MOD_ID + ":block/brick_oven/side", Side.SOUTH)
+			.setTex(MOD_ID + ":block/brick_oven/top", Side.TOP)
+			.setTex(MOD_ID + ":block/brick_oven/top", Side.BOTTOM)
+			.setTex(MOD_ID + ":block/brick_oven/active_front", Side.NORTH));
 
-
+		dispatcher.addDispatch(new BlockModelHorizontalRotation<>(freezerIdle)
+			.setTex(MOD_ID + ":block/freezer/side", Side.WEST)
+			.setTex(MOD_ID + ":block/freezer/side", Side.EAST)
+			.setTex(MOD_ID + ":block/freezer/side", Side.SOUTH)
+			.setTex(MOD_ID + ":block/freezer/top", Side.TOP)
+			.setTex(MOD_ID + ":block/freezer/top", Side.BOTTOM)
+			.setTex(MOD_ID + ":block/freezer/idle_front", Side.NORTH));
+		dispatcher.addDispatch(new BlockModelHorizontalRotation<>(freezerActive)
+			.setTex(MOD_ID + ":block/freezer/side", Side.WEST)
+			.setTex(MOD_ID + ":block/freezer/side", Side.EAST)
+			.setTex(MOD_ID + ":block/freezer/side", Side.SOUTH)
+			.setTex(MOD_ID + ":block/freezer/top", Side.TOP)
+			.setTex(MOD_ID + ":block/freezer/top", Side.BOTTOM)
+			.setTex(MOD_ID + ":block/freezer/active_front", Side.NORTH));
 	}
 
 	@Override

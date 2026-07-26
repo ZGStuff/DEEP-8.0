@@ -3,6 +3,7 @@ package silveon22.deep;
 import net.minecraft.core.WeightedRandomLootObject;
 import net.minecraft.core.block.Blocks;
 import net.minecraft.core.data.registry.Registries;
+import net.minecraft.core.data.registry.recipe.RecipeEntryBase;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.Items;
 import net.minecraft.core.util.helper.DyeColor;
@@ -12,9 +13,23 @@ import turniplabs.halplibe.helper.RecipeBuilder;
 import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import static silveon22.deep.Deep.MOD_ID;
 
 public class DEEPRecipes implements RecipeEntrypoint {
+	public static <T extends RecipeEntryBase<?,?,?>> List<T> getAllRecipesOfType(Class<T> clazz){
+		List<T> recipes = new ArrayList<>();
+		for (RecipeEntryBase<?, ?, ?> recipe : Registries.RECIPES.getAllRecipes()) {
+			if (clazz.isAssignableFrom(recipe.getClass())) {
+				recipes.add(clazz.cast(recipe));
+			}
+		}
+		return Collections.unmodifiableList(recipes);
+	}
+
 	@Override
 	public void onRecipesReady() {
 		Registries.ITEM_GROUPS.register("silveon22.deep:gemstones",Registries.stackListOf(Items.DIAMOND,DEEPItems.amethyst));
